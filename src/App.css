@@ -1,7 +1,18 @@
 html {
-  background-color: rgb(111, 0, 111);
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
   background-image: url("https://images.unsplash.com/photo-1490567674331-72de84794694?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80");
   background-repeat: repeat-y;
+  animation:cereal_anim .4s alternate infinite;
+  background-color: rgb(246, 249, 255);
+  animation-iteration-count: infinite;
+}
+
+@keyframes cereal_anim{
+  0%{background-position: 0 0;}
+  100%{background-position: -2px 0;}
 }
 
 body {

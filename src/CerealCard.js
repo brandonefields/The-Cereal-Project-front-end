@@ -10,14 +10,14 @@ function CerealCard( props ) {
     return (
         <div className="cereal-card">
             <div className="cereal-card-name">
-                <label className="cereal-card-name">
-                    Cereal Name:
+                <label className="cereal-card-name-label">
+                    Cereal Name :
                 </label>
                 <p className="cereal-card-name">{props.cereal.cereal_name} </p>
             </div>
             <div className="cereal-card-rating">
-                <label className="cereal-card-rating">
-                    Cereal Rating:  
+                <label className="cereal-card-rating-label">
+                    Cereal Rating :  
                 </label>
                 <p className="cereal-card-rating">{props.cereal.cereal_rating}</p>
             </div>

@@ -4,10 +4,10 @@ import { useState, useEffect } from 'react'
 
 function CerealForm(props) {
 
-    const [cereal_name, setCereal_name] = useState(" ")
+    const [cereal_name, setCereal_name] = useState("")
     const [cereal_rating, setCereal_rating] = useState(0)
-    const [cereal_image, setCereal_image] = useState(" ")
-    const [cereal_brand, setCereal_brand] = useState(" ")
+    const [cereal_image, setCereal_image] = useState("")
+    const [cereal_brand, setCereal_brand] = useState("")
     //you have a state for cereal bc you passed it down in CerealPage
 
 
@@ -62,7 +62,7 @@ function CerealForm(props) {
                 className="form-label"
                 htmlfor="cereal_name">
 
-                Insert Your Preferred Cereal Here:
+                Insert Your Preferred Cereal Here :
 
             </label>
             <input
@@ -79,7 +79,7 @@ function CerealForm(props) {
                 className="form-label"
                 htmlFor="cereal_brand">
 
-                Insert Your Preferred Cereals Brand:
+                Insert Your Preferred Cereals Brand :
 
             </label>
             <input
@@ -95,7 +95,7 @@ function CerealForm(props) {
 
             <label className="form-label">
 
-                Choose your Cereals Rating:
+                Choose your Cereals Rating :
 
             </label>
             <select onChange={(event) => setCereal_rating(event.target.value)} value={cereal_rating}>
@@ -106,20 +106,20 @@ function CerealForm(props) {
                 className="form-label"
                 htmlFor="cereal_brand">
 
-                Insert Cereal Image URL:
+                Insert Cereal Image URL :
 
             </label>
             <input
                 id="cereal-brand"
                 className="form-input-box"
                 type="text"
-                placeholder="cereal brand here"
+                placeholder="cereal image here"
                 name="cereal-brand-name"
                 value={cereal_image}
                 onChange={(event) => setCereal_image(event.target.value)}
             ></input>
 
-            <input type="submit" ></input>
+            <input className="submit-button"type="submit" ></input>
         </form>
 
     )

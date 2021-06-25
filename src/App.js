@@ -13,9 +13,9 @@ function App() {
         </img>
         <h1>the Cereal Project</h1>
       <CerealPage /> 
-
       </section>
     </div>
+    
   )
 }
 

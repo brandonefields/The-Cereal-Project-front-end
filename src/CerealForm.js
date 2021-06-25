@@ -19,11 +19,11 @@ function CerealForm(props) {
     useEffect(() => {
         fetch('http://localhost:3000/cereals')
             .then(res => res.json())
-            .then(console.log)
+            .then((cel) => cel == props.setCereals)
         //.then(brands => setCereals(brands))
     }, [])
 
-    console.log(props.cereals[1])
+    // console.log(props.cereals)
 
 
     //useEffect(getBrands, [])
@@ -56,11 +56,12 @@ function CerealForm(props) {
                 className="form-label"
                 htmlfor="cereal_name">
 
-                	
-            &#10034; Insert Your Preferred Cereal Here :
+
+                &#10034; Insert a Cereal Here :
 
             </label>
             <input
+                className="input-box-form"
                 id="cereal_name"
                 className="form-input-box"
                 type="text"
@@ -74,10 +75,11 @@ function CerealForm(props) {
                 className="form-label"
                 htmlFor="cereal_brand">
 
-            &#10034; Insert Your Preferred Cereals Brand :
+                &#10034; Insert the Cereals Brand :
 
             </label>
             <input
+                className="input-box-form"
                 id="cereal-brand"
                 className="form-input-box"
                 type="text"
@@ -90,7 +92,7 @@ function CerealForm(props) {
 
             <label className="form-label">
 
-            &#10034; Choose your Cereals Rating :
+                &#10034; Choose the Cereals Rating :
 
             </label>
             <select onChange={(event) => setCereal_rating(event.target.value)} value={cereal_rating}>
@@ -101,10 +103,11 @@ function CerealForm(props) {
                 className="form-label"
                 htmlFor="cereal_brand">
 
-            &#10034; Insert Cereal Image URL :
+                &#10034; Insert a Cereal Image URL :
 
             </label>
             <input
+                className="input-box-form"
                 id="cereal-brand"
                 className="form-input-box"
                 type="text"
@@ -114,7 +117,8 @@ function CerealForm(props) {
                 onChange={(event) => setCereal_image(event.target.value)}
             ></input>
 
-            <input type="submit" ></input>
+            <input className="form-submit-button" type="submit" ></input>
+
         </form>
 
     )

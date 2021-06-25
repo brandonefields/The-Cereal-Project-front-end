@@ -6,8 +6,9 @@ function CerealCard( props ) {
         props.removeCereal(props.cereal);
     }
 
-    const alertButton = ()=> {
-       return alert("Please, try again at a later time.")
+    const changeRating = (event)=> {
+        event.stopPropagation()
+        props.changeCerealRating(props.cereal)
     }
 
 
@@ -24,19 +25,22 @@ function CerealCard( props ) {
                     Cereal Rating :  
                 </label>
                 <p className="cereal-card-rating">{props.cereal.cereal_rating}</p>
+
                 <button 
-                    placeholder="vote new rating?" 
-                    className="rating-button"
-                    type="button">change rating
-                    onClick={alertButton}
-                </button>
-                <input placeholder="vote new rating?">
                     
+                    className="rating-button"
+                    onClick={changeRating}
+                    type="button">change rating
+                </button>
+                <input
+                    placeholder="vote new rating?" >
                 </input>
+              
                 
             </div>
-                <img className="card-image" src={props.cereal.cereal_image} alt="image of selected cereal" />
+                <img className="card-image" src={props.cereal.cereal_image} alt={`image of ${props.cereal.cereal_name} selected cereal`} />
             <div className="cereal-card-buttons">
+                
                 <button
                 onClick={removeCerealWithButton}
                 className="cereal-card-buttons">

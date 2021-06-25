@@ -9,6 +9,8 @@ function CerealCardsContainer( props ) {
         key={cereal.id} 
         cereal={cereal}
         removeCereal={props.removeCereal} 
+        changeCerealRating={props.changeCerealRating}
+        changeRating={props.changeRating}
         />
     })
 

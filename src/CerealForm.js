@@ -15,12 +15,6 @@ function CerealForm(props) {
         const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         return arr.map(num => <option value={num}>{num}</option>)
     }
-    // function getBrands() {
-    //     fetch('http://localhost:3000/cereals')
-    //         .then(res => res)
-    //         .then(console.log)
-    //     //.then(apiBrands => setCereal_brand(apiBrands))
-    // }
 
     useEffect(() => {
         fetch('http://localhost:3000/cereals')
@@ -62,7 +56,8 @@ function CerealForm(props) {
                 className="form-label"
                 htmlfor="cereal_name">
 
-                Insert Your Preferred Cereal Here :
+                	
+            &#10034; Insert Your Preferred Cereal Here :
 
             </label>
             <input
@@ -79,7 +74,7 @@ function CerealForm(props) {
                 className="form-label"
                 htmlFor="cereal_brand">
 
-                Insert Your Preferred Cereals Brand :
+            &#10034; Insert Your Preferred Cereals Brand :
 
             </label>
             <input
@@ -95,7 +90,7 @@ function CerealForm(props) {
 
             <label className="form-label">
 
-                Choose your Cereals Rating :
+            &#10034; Choose your Cereals Rating :
 
             </label>
             <select onChange={(event) => setCereal_rating(event.target.value)} value={cereal_rating}>
@@ -106,7 +101,7 @@ function CerealForm(props) {
                 className="form-label"
                 htmlFor="cereal_brand">
 
-                Insert Cereal Image URL :
+            &#10034; Insert Cereal Image URL :
 
             </label>
             <input
@@ -119,7 +114,7 @@ function CerealForm(props) {
                 onChange={(event) => setCereal_image(event.target.value)}
             ></input>
 
-            <input className="submit-button"type="submit" ></input>
+            <input type="submit" ></input>
         </form>
 
     )
